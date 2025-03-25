@@ -105,7 +105,7 @@ const NavBar = ({setCategory, setIsClick, setLoggedIn, isLoggedIn }) => {
           className="bars" 
           onClick={() => setIsClick(prev => !prev)}
         />
-        <img onClick={() => navigate('/dashboard')} style={{cursor:"pointer", width:"200px"}}  src="src/assets/logo-removebg-preview.png" alt="" />
+        <img onClick={() => navigate('/dashboard')} style={{cursor:"pointer", width:"200px"}}  src="/assets/logo-removebg-preview.png" alt="" />
       </div>
 
       {isLoggedIn ? (

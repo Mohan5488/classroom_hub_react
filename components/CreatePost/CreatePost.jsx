@@ -10,6 +10,7 @@ const PostForm = () => {
   const [caption, setCaption] = useState('');
   const [links, setLinks] = useState(['', '', '']);
   const [message, setMessage] = useState('');
+  const [submitting, setSubmitting] = useState(null);
 
   const username = localStorage.getItem('username');
   const department = localStorage.getItem('dept');
@@ -50,6 +51,7 @@ const PostForm = () => {
   };
 
   const handleSubmit = async (e) => {
+    setSubmitting(true);
     e.preventDefault();
     const categoryMapping = {
       "Notes": 1, "Events": 2, "Announcements": 3,
@@ -94,6 +96,9 @@ const PostForm = () => {
     } catch (error) {
       console.error('Upload Error:', error);
       setMessage('Error uploading post');
+    }
+    finally{
+      setSubmitting(false)
     }
   };
 
@@ -163,6 +168,7 @@ const PostForm = () => {
           
           <button type="submit">Post</button>
           {message && <div className="message">{message}</div>}
+          {submitting && <div className="loading">Submitting...</div>}
         </div>
       </form>
 

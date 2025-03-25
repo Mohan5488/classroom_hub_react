@@ -79,6 +79,9 @@ nav {
     .bars {
         display: block;
     }
+    .logo img{
+        display: none;
+    }
 }
 
 .loginBtn {

@@ -98,7 +98,7 @@ const Login = ({setLoggedIn}) => {
         {loading ? <p>Loading...</p> : ""}
         </div>
         <div>
-          <img src="src/assets/login.jpeg" alt="inventory image" />
+          <img src="/assets/login.jpeg" alt="inventory image" />
         </div>
       </div>
     </div>

@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.front{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('assets/main2.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.about {
+    text-align: center;
+    padding: 50px 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Features Section */
+.features {
+    padding: 50px 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.features ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.features li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* Contact Us Section */
+.contact {
+    padding: 40px 20px;
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+/* Footer Section */
+.footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+}

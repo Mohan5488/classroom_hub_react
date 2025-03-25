@@ -1,0 +1,245 @@
+
+.feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin-top: 20px;
+    width: 100%;
+    gap: 20px;
+    flex-basis: 70%;
+}
+
+.post {
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.username {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.feed .post-title{
+    margin-left: 14px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.post-image {
+    width: 95%;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.post-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.action-left{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.icon {
+    transition: 0.3s;
+}
+
+.icon:hover {
+    color: red;
+}
+
+/* Likes & Caption */
+.likes {
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.caption {
+    padding: 5px 10px;
+}
+
+.caption .username {
+    font-weight: bold;
+}
+
+.description{
+    display: flex;
+    align-items: baseline;
+}
+
+.description p {
+    margin-left: 10px;
+}
+.description p:first-child{
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .feed {
+        max-width: 90%;
+        flex-basis: 80%;
+    }
+
+    .post {
+        max-width: 700px;
+        padding: 8px;
+    }
+
+    .post-header {
+        padding: 8px;
+    }
+
+    .profile-pic {
+        width: 35px;
+        height: 35px;
+    }
+
+    .username {
+        font-size: 14px;
+    }
+
+    .feed .post-title {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    .post-image {
+        width: 100%;
+    }
+
+    .post-actions {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .likes, .caption {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .feed {
+        flex-basis: 100%;
+        max-width: 95%;
+    }
+
+    .post {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .post-header {
+        padding: 6px;
+        gap: 8px;
+    }
+
+    .profile-pic {
+        width: 30px;
+        height: 30px;
+    }
+
+    .username {
+        font-size: 13px;
+    }
+
+    .feed .post-title {
+        font-size: 14px;
+        margin-left: 8px;
+    }
+
+    .post-image {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .post-actions {
+        font-size: 16px;
+        padding: 6px;
+    }
+
+    .icon {
+        font-size: 18px;
+    }
+
+    .likes, .caption {
+        font-size: 13px;
+        padding: 4px 6px;
+    }
+
+    .description p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .feed {
+        max-width: 100%;
+    }
+
+    .post {
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .profile-pic {
+        width: 28px;
+        height: 28px;
+    }
+
+    .username {
+        font-size: 12px;
+    }
+
+    .feed .post-title {
+        font-size: 13px;
+        margin-left: 6px;
+    }
+
+    .post-actions {
+        font-size: 14px;
+    }
+
+    .icon {
+        font-size: 16px;
+    }
+
+    .likes, .caption {
+        font-size: 12px;
+    }
+
+    .description p {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    iframe{
+        width: 100%;
+        height: 400px;
+    }
+}

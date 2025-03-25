@@ -1,0 +1,108 @@
+.post-container{
+    display: flex;
+    flex-direction: column;
+}
+.heading{
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    padding: 20px;
+}
+
+.post-box {
+    aspect-ratio: 1 / 1;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+}
+.post-content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+.pdf-wrapper {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.pdf-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.link-item {
+    font-size: 18px;
+    cursor: pointer;
+    color: blue;
+}
+
+.link-item a {
+    text-decoration: none;
+    color: blue;
+}
+
+.link-item a:hover {
+    text-decoration: underline;
+}
+.post-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.delete-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.delete-button:hover {
+    opacity: 1;
+}

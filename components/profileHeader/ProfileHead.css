@@ -1,0 +1,87 @@
+.profile-header-user{
+    padding: 30px 20%;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+}
+.profile-header-user .profile-pic-user .profile-icon-user{
+    font-size: 200px;
+    color: #555;
+}
+.profile-header-user .profile-details-user{
+    margin-right: 40px;
+}
+
+.username {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.user-info {
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.profile-header .profile-pic  .profile-icon {
+    font-size: 200px;
+    color: #555;
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .profile-header-user {
+        padding: 30px 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-header-user {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 5%;
+    }
+
+    .profile-header-user .profile-pic-user {
+        margin: 0 0 15px 0;
+    }
+
+    .profile-header-user .profile-pic-user .profile-icon-user {
+        font-size: 180px;
+    }
+
+    .profile-header-user .profile-details-user {
+        text-align: center;
+        min-width: unset;
+    }
+
+    .usernam {
+        font-size: 22px;
+    }
+
+    .user-info {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-header-user .profile-pic-user .profile-icon-user {
+        font-size: 150px;
+    }
+
+    .usernam {
+        font-size: 20px;
+    }
+
+    .user-info {
+        font-size: 12px;
+    }
+}
+

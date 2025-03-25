@@ -1,0 +1,169 @@
+.center{
+  width: 100%;
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.post-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+.post-form .left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.post-form .profile-icon {
+  font-size: 200px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.post-form .user-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.post-form .user-info label {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.post-form .user-info input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  font-size: 14px;
+  color: #666;
+  outline: none;
+  text-align: center;
+}
+
+.post-form .right-section {
+  flex-grow: 1;
+  padding-left: 20px;
+}
+
+.post-form .right-section h2 {
+  text-align: left;
+  font-size: 22px;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.post-form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+  color: #444;
+}
+
+.post-form input,.post-form textarea,.post-form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+}
+
+.post-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.post-form .upload-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.post-form .upload-label input {
+  display: none;
+}
+
+.post-form .file-preview {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.post-form .file-preview img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.post-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Message Styling */
+.post-form .message {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 16px;
+  color: green;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .post-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .post-form .right-section {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .post-form .left-section {
+    width: 100%;
+    text-align: center;
+  }
+}

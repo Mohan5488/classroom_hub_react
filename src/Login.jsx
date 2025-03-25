@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import './login.css'
+import { fas } from '@fortawesome/free-solid-svg-icons';
 const Login = ({setLoggedIn}) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState('');
@@ -8,12 +9,14 @@ const Login = ({setLoggedIn}) => {
   const [passwordMessage, setPasswordMessage] = useState("");
   const [generalMessage, setGeneralMessage] = useState("");
   const navigate = useNavigate(); 
+  const [loading, setLoading] = useState(false)
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8000/api/login/', {
+      const response = await fetch('https://classroom-hub.onrender.com/api/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -65,6 +68,9 @@ const Login = ({setLoggedIn}) => {
       console.error('Error during login:', error);
       setGeneralMessage('An error occurred. Please try again later.');
     }
+    finally{
+      setLoading(false)
+    }
   };
 
   return (
@@ -89,7 +95,7 @@ const Login = ({setLoggedIn}) => {
         {userMessage && <p className="error">{userMessage}</p>}
         {passwordMessage && <p className="error">{passwordMessage}</p>}
         <p className={generalMessage === 'Login successful' ? 'success' : ''}>{generalMessage}</p>
-    
+        {loading ? <p>Loading...</p> : ""}
         </div>
         <div>
           <img src="src/assets/login.jpeg" alt="inventory image" />

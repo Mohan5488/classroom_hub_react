@@ -18,7 +18,7 @@ const ChangePasswordView = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/change-password/", {
+      const response = await fetch("https://classroom-hub.onrender.com/api/change-password/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

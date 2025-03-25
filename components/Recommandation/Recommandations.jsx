@@ -30,7 +30,7 @@ const Recommandations = ({ category, postid }) => {
 
     const fetchPostData = async () => {
         try {
-            const response = await fetch(`http://localhost:8000/api/recommend/${dept}/${year}/`);
+            const response = await fetch(`https://classroom-hub.onrender.com/api/recommend/${dept}/${year}/`);
             if (!response.ok) {
                 throw new Error('Failed to fetch');
             }

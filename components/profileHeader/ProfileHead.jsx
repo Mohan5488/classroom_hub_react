@@ -41,7 +41,7 @@ const ProfileHead = () => {
         try {
             setLoading(true);
             setError('');
-            const response = await fetch(`http://localhost:8000/api/profile/?user=${username}`, {
+            const response = await fetch(`https://classroom-hub.onrender.com/api/profile/?user=${username}`, {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' }
             });

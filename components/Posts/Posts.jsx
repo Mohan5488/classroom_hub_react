@@ -23,7 +23,7 @@ const Posts = ({}) => {
   const token = localStorage.getItem('token');
 
   const fetchPostData = async () => {
-    const response = await fetch(`http://localhost:8000/api/post-view/?id=${postid}`,{
+    const response = await fetch(`https://classroom-hub.onrender.com/api/post-view/?id=${postid}`,{
       method: 'GET',
     })
     if(!response.ok){
@@ -42,7 +42,7 @@ const Posts = ({}) => {
   }
 
   const handleCommentSubmit =async ()=>{
-    const response = await fetch(`http://localhost:8000/api/add-comment/?id=${postid}`,{
+    const response = await fetch(`https://classroom-hub.onrender.com/api/add-comment/?id=${postid}`,{
       method:'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ const Posts = ({}) => {
   }
   const handleDeleteComment = async (commentId) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/add-comment/?id=${commentId}`, {
+      const response = await fetch(`https://classroom-hub.onrender.com/api/add-comment/?id=${commentId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Token ${token}`,
@@ -85,7 +85,7 @@ const Posts = ({}) => {
 
   const handleReplySubmit = async (commentId) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/add-comment/?id=${commentId}`, {
+      const response = await fetch(`https://classroom-hub.onrender.com/api/add-comment/?id=${commentId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -116,7 +116,7 @@ const Posts = ({}) => {
     if (!confirmDelete) return;
   
     try {
-      const response = await fetch(`http://localhost:8000/api/post-view/?id=${id}`, {
+      const response = await fetch(`https://classroom-hub.onrender.com/api/post-view/?id=${id}`, {
         method: "DELETE",
         headers: {
           'Authorization': `Token ${token}`,
@@ -134,56 +134,10 @@ const Posts = ({}) => {
       alert(error.message);
     }
   };
-  
-
-  // const handleDeleteReply = async (replyId) => {
-  //   try {
-  //     const response = await fetch(`http://localhost:8000/api/add-comment/?id=${replyId}`, {
-  //       method: 'DELETE',
-  //       headers: {
-  //         'Authorization': `Token ${token}`,
-  //       },
-
-  //     });
-
-  //     if (!response.ok) throw new Error('Failed to delete reply');
-  //     await fetchPostData();
-  //   } catch (error) {
-  //     alert(error.message);
-  //   }
-  // }
-
-  // const handleEditClick = (commentId, content) => {
-  //   setEditingCommentId(commentId);
-  //   setEditedContent(content);
-  // };
-
-  // const handleEditSubmit = async (commentId) => {
-  //   try {
-  //     const response = await fetch(`http://localhost:8000/api/add-comment/?id=${commentId}`, {
-  //       method: 'PATCH',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //         'Authorization': `Token ${token}`,
-  //       },
-  //       body: JSON.stringify({
-  //         id: commentId,
-  //         content: editedContent,
-  //       }),
-  //     });
-
-  //     if (!response.ok) throw new Error('Failed to edit comment');
-  //     await fetchPostData();
-  //     setEditingCommentId(null);
-  //     setEditedContent('');
-  //   } catch (error) {
-  //     alert(error.message);
-  //   }
-  // };
 
   const fileExtension = post.post_image? post.post_image.split('.').pop().toLowerCase():null;
   const isPDF = fileExtension === 'pdf';
-  const fileUrl = post.post_image? `http://localhost:8000${post.post_image}`:null;
+  const fileUrl = post.post_image? `https://classroom-hub.onrender.com${post.post_image}`:null;
 
   const renderComments = (comments, depth = 0) => {
     return comments.map((comment) => (

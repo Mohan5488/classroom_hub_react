@@ -60,7 +60,7 @@ const PostForm = () => {
     const linksHTML = formatLinksToHTML(links);
     const finalCaption = caption + (linksHTML ? `<br>Links:<br>${linksHTML}` : "");
 
-    console.log(finalCaption); // Debugging
+    console.log(finalCaption);
 
     const formData = new FormData();
     formData.append('user', JSON.stringify({ username })); 
@@ -72,7 +72,7 @@ const PostForm = () => {
     if (file) formData.append('post_image', file);
 
     try {
-      const response = await fetch('http://localhost:8000/api/upload-post/', {
+      const response = await fetch('https://classroom-hub.onrender.com/api/upload-post/', {
         method: 'POST',
         headers: {
           'Authorization': `Token ${localStorage.getItem('token')}`,

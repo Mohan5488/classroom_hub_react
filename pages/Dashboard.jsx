@@ -35,7 +35,7 @@ const Dashboard = ({ category }) => {
   useEffect(() => {
     const fetchMainData = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/dashboard/", {
+        const response = await fetch("https://classroom-hub.onrender.com/api/dashboard/", {
           method: "GET",
           headers: {
             Authorization: `Token ${token}`,

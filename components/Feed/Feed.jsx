@@ -21,7 +21,7 @@ const Feed = ({ category }) => {
 
   const fetchSavedPosts = async () => {
     try {
-        const response = await fetch(`http://localhost:8000/api/saved/?user=${localStorage.getItem('username')}`, {
+        const response = await fetch(`https://classroom-hub.onrender.com/api/saved/?user=${localStorage.getItem('username')}`, {
             method: 'GET',
             headers: {
                 Authorization: `Token ${token}`,
@@ -70,7 +70,7 @@ const Feed = ({ category }) => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`http://localhost:8000/api/feed/${dept}/${year}/${category}/`);
+        const response = await fetch(`https://classroom-hub.onrender.com/api/feed/${dept}/${year}/${category}/`);
         if (!response.ok) {
           throw new Error('Failed to fetch');
         }
@@ -99,7 +99,7 @@ const Feed = ({ category }) => {
       setLoading(true);
 
       if(!saved.includes(id)){
-        const response = await fetch('http://localhost:8000/api/saved/',{
+        const response = await fetch('https://classroom-hub.onrender.com/api/saved/',{
           method : "POST", 
           headers : {
             Authorization: `Token ${token}`,
@@ -115,7 +115,7 @@ const Feed = ({ category }) => {
         SetSaved((prev) => [...prev, id]);
       }else{
         const savedId = getSelectedPostId(id);
-        const response = await fetch(`http://localhost:8000/api/saved/?id=${savedId}`,{
+        const response = await fetch(`https://classroom-hub.onrender.com/api/saved/?id=${savedId}`,{
           method : "DELETE", 
           headers : {
             Authorization: `Token ${token}`,
@@ -159,7 +159,7 @@ const Feed = ({ category }) => {
           ))
         : 
           data.map((post, index) => {
-            const fileUrl = post.post_image ? `http://localhost:8000${post.post_image}` : null;
+            const fileUrl = post.post_image ? `https://classroom-hub.onrender.com${post.post_image}` : null;
             const fileExtension = post.post_image ? post.post_image.split('.').pop().toLowerCase() : "";
             const isPDF = fileExtension === "pdf";
 

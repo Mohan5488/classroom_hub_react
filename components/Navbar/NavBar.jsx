@@ -57,7 +57,7 @@ const NavBar = ({setCategory, setIsClick, setLoggedIn, isLoggedIn }) => {
   };
   const fetchNotifications = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/notifications/", {
+      const response = await fetch("https://classroom-hub.onrender.com/api/notifications/", {
         method: "GET",
         headers: {
           Authorization: `Token ${token}`,
@@ -77,7 +77,7 @@ const NavBar = ({setCategory, setIsClick, setLoggedIn, isLoggedIn }) => {
 
   const handleMarkAsRead = async () => {
     try {
-      await fetch("http://localhost:8000/api/notifications/mark_as_read/", {
+      await fetch("https://classroom-hub.onrender.com/api/notifications/mark_as_read/", {
         method: "POST",
         headers: {
           Authorization: `Token ${token}`,
